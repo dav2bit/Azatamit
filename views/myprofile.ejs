@@ -1,0 +1,80 @@
+
+<html lang="en">
+    <head>
+        <%- include ('partials/head.ejs') %>
+    <link rel="stylesheet" href="/home/center-panel.css">
+    <link rel="stylesheet" href="/course/right-panel.css">
+    <link rel="stylesheet" href="/user-profile/center-panel.css">
+    <link rel="stylesheet" href="/edit-user-profile/right-panel.css">
+    <link rel="stylesheet" href="/edit-user-profile/center-panel.css">
+    </head>  
+    <body class="leftMenuClose">
+        <%- include ('partials/header.ejs') %>
+
+        <div class="main">
+            <%- include ('partials/left-panelV1.ejs',{name:''}) %>
+               
+        <div class="center-panel">
+
+            <div class="content">
+                
+                
+                
+                <div class="lessons">
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="right-panel">
+
+            <div class="author-info">
+                <form action="/user/update" method="post" enctype="multipart/form-data" onsubmit="sendDt(event,this)">
+
+                    <div class="s1">
+                        <label> 
+                           
+                            <canvas id= "canvas"  class="photo userPF"></canvas>
+                            <input type="file" size="60" style="display: none;" name="profilePhoto" class="pf">
+                        </label> 
+                        <div>
+                            <div class="name"><input type="text" value="<%= userProfile.FullName%>" name="fullName"></div>
+                            <p><%= userProfile.LikesCount%> like</p>
+                        </div>
+                    </div>
+    
+                    <div class="s2">
+                        <div class="bio">
+                            <span><i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span> <textarea name='description'> <%= userProfile.Description%></textarea></span>
+                        </div>
+                        <button class="formSub">save</button>
+                    </div>
+                </form>
+                
+              
+            </div>
+           
+        
+        </div>
+        </div>
+   
+        <%- include ('partials/modals.ejs') %>
+        
+        
+        <script>
+            function sendDt(e,form) {
+                alert("updated")
+                fetch(form.action,{method:'post', body: new FormData(form)});
+                e.preventDefault();
+            }
+
+        </script>
+        <script type="module" src="/scripts/my_profile.js"></script>
+        
+    </body>
+</html>
+

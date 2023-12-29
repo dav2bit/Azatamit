@@ -1,0 +1,52 @@
+.main .center-panel .content .lessons{
+    margin-top: 0;
+}
+
+.center-panel{
+    width: 100% !important;
+    margin-left: 80px;
+    margin-right: 20px;
+}
+
+.main .center-panel .content{
+    margin-left: 20px;
+    width: 100% !important;
+}  
+.main .center-panel .content .filter{
+    width: calc(100% - 110px) !important;
+    height: 10px;
+    margin-top: 0 !important;
+    padding-top: 30px !important;
+} 
+
+
+.main{
+flex-direction: column  ;
+}
+.center-panel{
+width: 100%;
+order: 3;
+width: calc(100% - 90px) !important;
+}
+.right-panel{
+display: block;
+position: relative;  
+order: 1;
+top: 0;
+left: 90px;
+width: calc(100% - 120px) !important;
+height: auto;
+
+}
+
+.right-panel .s2 .bio{
+width: 98%;
+}
+
+.right-panel .author-info .s2 button{
+width: 100px !important;
+}
+.right-panel .s2 .bio textarea{
+width: 96% !important;
+height: 90px !important;
+}

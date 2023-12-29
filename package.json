@@ -1,0 +1,43 @@
+{
+  "name": "azatamit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r dotenv/config index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "api": "^5.0.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.1",
+    "chat-gpt-authenticator": "^0.5.0",
+    "chatgpt": "^4.8.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "microsoft-cognitiveservices-speech-sdk": "^1.25.0",
+    "mongodb": "^4.12.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "openai": "^3.1.0",
+    "openai-authenticator": "^0.0.3",
+    "openai-token": "^1.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sentence-similarity": "^3.1.0",
+    "similarity-score": "^1.0.0",
+    "socket.io": "^4.5.4"
+  },
+  "type": "module"
+}

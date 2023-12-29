@@ -1,0 +1,33 @@
+.center-panel{
+    width: calc(100% - 550px);
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+.center-panel .content{
+    width: 900px;
+    transition: 1s;
+    position: relative;
+    
+}
+
+/*left menu close*/
+.leftMenuClose .center-panel{
+    width: calc(100% - 370px);
+    margin-left: 70px;
+    transition: 1s;
+}
+
+.leftMenuClose .main .center-panel  .content{
+    width: 1000px;
+    transition: 1s;
+}
+.leftMenuClose .main .center-panel  .content .filter{
+    width: 1000px;
+    transition: 1s;
+}
+
+
+
+  

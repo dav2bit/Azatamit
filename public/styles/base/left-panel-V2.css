@@ -1,0 +1,42 @@
+.main .left-panel .navbar {
+    display: flex;
+    width: 100%;
+    transition: width 1s;
+}
+
+.main .left-panel .navbar li {
+    padding: 0;
+    transition: 0.5s;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    transition: width 1s;
+}
+
+
+.main .left-panel .lesson-titles li {
+    width: 100%;
+    height: 50px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+}
+
+.main .left-panel .lesson-titles .selected {
+    background-color: #fff;
+    color: black;
+}
+
+.main .left-panel .lesson-titles li span {
+    margin-left: 10px;
+}
+
+.leftMenuClose .main .left-panel .navbar {
+
+    width: 70px;
+    transition: width 1s;
+
+}

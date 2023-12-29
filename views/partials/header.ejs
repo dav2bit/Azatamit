@@ -1,0 +1,130 @@
+<div class="header">
+
+    <div class="left-panel">
+        <div class="hamburger-icon">
+            <button class="menu opened"
+                onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <path class="line line1"
+                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
+                    </path>
+                    <path class="line line2" d="M 20,50 H 80"></path>
+                    <path class="line line3"
+                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <form action="" class="searchForm">
+            <div class="search">
+                <input type="text" placeholder="search">
+                <span class="send"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <div class="search-modal">
+                    <ul>
+                       
+                    </ul>
+                </div>
+            </div>
+        </form>
+       
+
+        <div class="phone-logo">
+            A
+        </div>
+
+    </div>
+
+    <div class="reight-panel">
+
+        <% if(isAutenticated){%>
+
+            <div class="registered" style="display: flex; align-items: center;">
+
+                <div class="make-content">
+                    <i class="fa-solid fa-plus modal-icon write"></i>
+
+                    <div class="modal" style="display: none;">
+                        <div class="make-content-modal">
+                            <ul>
+                                <li> <a href="/content/writepost"><i class="fa-solid fa-pen"></i> write post</a> </li>
+                                <li class="makeCourse"> <i class="fa-solid fa-plus"></i>make course</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+                <div class="user-setings">
+                    <img src="/<%= user.photo  === null ? '1673695052080-28-97aa847d061a14894178805f1d551500.jpg' : user.photo %>"
+                        alt="" style="display:none;" class="hidenPhoto">
+                    <canvas class="modal-icon userPF" id="userImg"></canvas>
+
+
+                    <div class="modal" style="display: none;">
+                        <div class="setings-modal">
+                            <ul>
+                                <a href="/user/myprofile">
+                                    <li> <span><i class="fa fa-user" aria-hidden="true"></i>my profile</span> <i
+                                            class="fa-solid fa-arrow-right"></i></li>
+                                </a>
+
+                                <li>
+                                    <form action="/user/logout" method="post">
+                                        <button type="submit"> <span><i class="fa fa-sign-out"
+                                                    aria-hidden="true"></i>logout</span> <i
+                                                class="fa-solid fa-arrow-right"></i></button>
+                                    </form>
+                                </li>
+
+                                <li> <span><i class="fa fa-user" aria-hidden="true"></i>mood</span> <i
+                                        class="fa-solid fa-arrow-right"></i></li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <% }else{ %>
+                <div class="no-registered">
+                    <a href="/user/login"><button class="log-in">Log in</button></a>
+                    <a href="/user/signup"><button class="sign-up">Sign up</button></a>
+
+                </div>
+                <% } %>
+
+
+                    <div class="phone-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+
+    </div>
+
+</div>
+
+<div class="makeCourseModal">
+    <form action="">
+        <h3>Create Course</h3>
+        <input type="text" placeholder="title">
+
+        <div class="category-select-block">
+            <input type="text" class="course-search-category" placeholder="search category">
+            <div class="course-category">
+                <ul></ul>
+            </div>
+        </div>
+       
+
+        <button>create</button>
+    </form>
+
+    <span class="close">X</span>
+</div>
+
+<script type="module" src="../scripts/search.js"></script>

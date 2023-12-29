@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/chat/center-panel.css">
+    <link rel="stylesheet" href="/chat/right-panel.css">
+</head>
+<body>
+
+    
+    
+    <%- include ('partials/header.ejs') %>
+    
+
+    <div class="main">
+
+        <%- include ('partials/left-panelV1.ejs' , {name:"chat"}) %>
+
+
+        <div class="center-panel">
+            <div class="content">
+
+                <div class="messages">
+                    <ul class="">
+                         
+                    </ul>
+                </div>
+              
+                <% if(isAutenticated){%>
+                    <div class="sender">
+                        <form action="" class="sendMessage">
+                            <div class="masegeInp">
+                                <input type="text" placeholder="write text..">
+                            
+                            </div>
+        
+                            <div class="tools">
+
+                                <div class="sendIcon">
+                                    <button>
+                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                
+
+                    </div>
+                <% }else{ %>
+                    <h2 style="color: aliceblue;">login or register</h2>
+                <% } %>
+            </div>
+
+        </div>
+      
+        <%- include ('partials/adv.ejs') %>
+
+    </div>
+    
+    <%- include ('partials/footer-menu.ejs') %>
+   
+    <script>
+        var messages = document.querySelector(".messages")
+        
+
+
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const room = urlParams.get('room');
+
+        var socket = io();
+
+        const sender = document.querySelector('.masegeInp>input')  
+       
+        socket.emit('user connect' , room);
+
+      
+        if(document.querySelector('.sendMessage') !== null){
+            document.querySelector('.sendMessage').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (sender.value) {
+                socket.emit('send message', sender.value);
+
+                const message = document.createElement("li");
+
+                message.classList.add('your')
+
+                message.innerHTML = `  <div class="message">
+                                <div class="mesage-content"> 
+                                    <div class="autor-image"><img src="/<%= user.photo %>" alt=""></div>
+                                    <div class="text">
+                                        <p>
+                                          ${sender.value}
+                                        </p>
+                                    </div>                                   
+                                </div>
+                            </div>`;        
+            
+
+                document.querySelector("body > div.main > div.center-panel > div > div.messages > ul").appendChild(message)
+                messages.scrollTo(0,messages.scrollHeight)
+                sender.value = '';
+            }
+        });
+
+        
+        }
+      
+        
+        socket.on("get old messages" , (msg)=>{
+        
+            document.querySelector('.messages>ul').innerHTML = ''
+            msg.forEach(elem => {
+
+                const message = document.createElement("li");
+                
+                if(parseInt(elem.UserID)  === parseInt('<%= user.ID %>')){
+                    message.classList.add('your');
+
+                }
+                message.innerHTML = `  <div class="message ">
+                                <div class="mesage-content"> 
+                                    <div class="autor-image"><img src="/${elem.photo}" alt=""></div>
+                                    <div class="text">
+                                        <p>
+                                        ${elem.MText}
+                                        </p>
+                                    </div>                                   
+                                </div>
+                            </div>`;        
+
+
+                document.querySelector("body > div.main > div.center-panel > div > div.messages > ul").appendChild(message)
+                messages.scrollTo(0,messages.scrollHeight)
+            });
+      
+        })
+        
+
+        socket.on("get message" , (data)=>{
+            const message = document.createElement("li");
+        
+            if(parseInt(data.user.ID)  === parseInt('<%= user.ID %>')){
+                
+                return
+
+            }
+
+            message.innerHTML = `  <div class="message">
+                                <div class="mesage-content"> 
+                                    <div class="autor-image"><img src="/${data.user.photo}" alt=""></div>
+                                    <div class="text">
+                                        <p>
+                                          ${data.msg}
+                                        </p>
+                                    </div>                                   
+                                </div>
+                            </div>`;        
+            
+
+            document.querySelector('.messages').appendChild(message)
+            messages.scrollTo(0,messages.scrollHeight)
+        })
+
+
+    </script>
+    
+
+</body>
+</html>

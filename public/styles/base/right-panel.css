@@ -1,0 +1,21 @@
+.right-panel{
+    position: fixed;
+    width: 300px;
+    height: 80vh;
+    right: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right-panel button{
+    width: 200px;
+    background-color: #6e8850;
+    height: 30px;
+    border: none;
+    color: aliceblue;
+    border-radius:20px;
+    
+}

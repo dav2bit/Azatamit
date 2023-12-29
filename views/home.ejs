@@ -1,0 +1,76 @@
+<html lang="en">
+    <head>
+        <%- include ('partials/head.ejs') %>
+        <link rel="stylesheet" href="/home/center-panel.css">
+        <link rel="stylesheet" href="/home/right-panel.css">
+    </head>  
+    <body>
+        <%- include ('partials/header.ejs') %>
+
+        <div class="main">
+            <%- include ('partials/left-panelV1.ejs', {name:"home"})  %>
+            <div class="center-panel">
+                <div class="content">
+                    
+                    <div class="filter">
+            
+                        <div class="filter-section">
+                            <select id="types" name="types">
+                                <option value="all">All</option>
+                                <option value="course">Course</option>
+                                <option value="post">Post</option>
+                                </select>
+                        </div>
+            
+                        <div class="categories">
+            
+                            <div class="next go"><i class="fa-solid fa-angle-right active"></i></div>
+                            <div class="last go"><i class="fa-solid fa-angle-left active"></i></div>
+            
+                            <ul>
+                              
+                                <li class="active">All</li>
+                                <% categorys.forEach(function(category) { %>
+                                    <li><%= category.Title %></li>
+                                 <% }); %> 
+    
+                            </ul>
+            
+                        </div>
+            
+                    </div>
+                    
+            
+                    <div class="lessons"> 
+                    </div>
+
+
+            
+                </div>
+            
+            </div>
+
+            <%- include ('partials/adv.ejs') %>
+            
+        </div>
+
+        <%- include ('partials/footer-menu.ejs') %>
+        <%- include ('partials/modals.ejs') %>
+
+        <script src="/scripts/home.js" type="module"></script>
+
+
+      
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

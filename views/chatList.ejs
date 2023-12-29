@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <%- include ('partials/head.ejs') %>
+    <link rel="stylesheet" href="/chat/chatlist/center-panel.css">
+        
+    </head>  
+    <body>
+        <%- include ('partials/header.ejs' ) %>
+
+        <div class="main">
+            <%- include ('partials/left-panelV1.ejs', {name:"chat"}) %>
+            <div class="center-panel">
+                <div class="content">
+                    <ul style="color: aliceblue;" class="chatlist">
+
+                        <% chats.forEach(function(chat) { %>
+                           <a href="/messenger?room=<%= chat.ID%>" class="chatname"><li> <%= chat.Title %></li></a> 
+                         <% }); %> 
+                       
+
+                    </ul>
+                </div>
+            
+            </div>
+
+            <%- include ('partials/adv.ejs') %>
+
+        </div>
+
+        <%- include ('partials/footer-menu.ejs') %>
+     
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

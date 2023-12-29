@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <%- include ('partials/head.ejs') %>
+        <link rel="stylesheet" href="/home/center-panel.css">
+        <link rel="stylesheet" href="/home/right-panel.css">
+    </head>  
+    <body>
+        <%- include ('partials/header.ejs') %>
+
+        <div class="main">
+            <%- include ('partials/left-panelV1.ejs', {name:"home"})  %>
+            <div class="center-panel">
+                <div class="content">
+                    
+                    <div class="lessons" style="margin-top: 0;"> 
+                    </div>
+            
+                </div>
+            
+            </div>
+
+            <%- include ('partials/adv.ejs') %>
+            
+        </div>
+
+        <%- include ('partials/footer-menu.ejs') %>
+        <%- include ('partials/modals.ejs') %>
+
+        <script>window.userID = '<%-user.ID%>' </script>
+        <script src="/scripts/liked.js" type="module"></script>
+
+
+      
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

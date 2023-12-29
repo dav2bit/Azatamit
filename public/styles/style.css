@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap');
+
+
+:root {
+	--darck-gray:#252526;
+	--darck-background:#1E1E1E;
+	
+	
+  }
+/*
+  :root {
+	--darck-gray:#717b61;	
+	--darck-background:#ffffff18;
+	
+	
+  }*/
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: #2e2e2e;
+	border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(164, 255, 61, 0.156);
+	border-radius: 12px;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--darck-background);
+}
+
+
+.main{
+  padding-bottom: 400px;
+}
+
+p{
+	word-break: break-all;
+
+}
+
+.description{
+	word-break: break-all;
+	
+}
+
+.main{
+  display: flex;
+  padding-top: 70px;
+}
+
+a {
+	color: #165c00 ;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00A0C6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+i::before{
+	opacity: 1;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	font-weight:none  !important;
+	color: var(--darck-gray);
+}
+
+.active::before{
+	color: rgb(255, 255, 255) !important;
+    text-shadow: none !important;
+}

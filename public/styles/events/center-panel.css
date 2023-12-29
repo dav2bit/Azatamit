@@ -1,0 +1,65 @@
+.center-panel{
+    width: calc(100% - 250px); 
+}
+
+.center-panel .content{
+    width: 100%;
+    padding-left: 20px;
+   
+}
+
+.center-panel .content .events{
+    display: flex;
+    flex-wrap:  wrap;
+    height: auto;
+   
+
+
+}
+
+.center-panel .content .events li{
+    width: calc(100% / 4 - 10px);
+    list-style: none;
+    margin: 5px;
+    background-color: var(--darck-gray);
+    color: aliceblue;
+   
+}
+
+.center-panel .content .events li .text{
+    padding:0 10px 15px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.center-panel .content .events li p{
+    margin-top: 10px;
+}
+
+.center-panel .content .events li .img{
+    background-image: url("https://ntucclubdtecdn.azureedge.net/assets/images/default-source/venues/d'marquee/img-20191207-wa0003.jpg?sfvrsn=daf74b0_2");
+    height: 200px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+.center-panel .content .events li  button{
+    height: 25px;
+    margin-top: 20px;
+    background-color: rgba(141, 141, 141, 0.075);
+    border: none;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+
+.leftMenuClose .center-panel{
+    width: calc(100% - 70px); 
+    margin-left: 70px;
+}
+
+.leftMenuClose .center-panel .content{
+    width: 100% !important;
+}

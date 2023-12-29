@@ -1,0 +1,75 @@
+
+.main .center-panel .content{
+    width: 1000px;
+    transition: 1s;
+    background-color: var(--darck-gray);
+    color: aliceblue;
+    margin-top: 20px ;
+    padding: 10px;
+    
+    position: relative;
+    
+}
+
+
+.center-panel .content .lesson{
+    margin: 20px;
+}
+
+.center-panel .content .lesson img{
+    margin: 20px 0;
+}
+.center-panel .content .lesson .lesson-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.center-panel .content .lesson p{
+    line-height: 30px;
+}
+
+.center-panel .content .lesson img{
+    width: 100%;
+}
+
+.fxElems .events{
+    position: fixed;
+    width: 100px;
+    height: 40px;
+    background-color: #2e2e2e;
+    left: 45%;
+    bottom: 10px;
+    display: flex;
+    border-radius: 20px;
+}
+.fxElems .events div{
+    width: 45px;
+    display: flex;align-items: center;justify-content: center;
+    
+}
+
+.fxElems .events div i::before{
+    color: aliceblue;
+    color: #2e2e2e ;
+}
+.leftMenuClose .center-panel{
+    
+    margin-left: 70px;
+    transition: 1s;
+    
+}
+
+.leftMenuClose .main .center-panel  .content{
+    width: 1000px;
+    transition: 1s;
+}
+.leftMenuClose .main .center-panel  .content .topics{
+    width: 1000px;
+    transition: 1s;
+}
+
+@media only screen and (max-width: 1497px) {
+    .main .center-panel .content{
+        width: 80% !important;
+    }
+}

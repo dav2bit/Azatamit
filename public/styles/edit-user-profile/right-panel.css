@@ -1,0 +1,24 @@
+.right-panel .author-info .s1 .name input{
+    background-color: rgb(46, 46, 46);
+
+    border: none;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    color: aliceblue;
+
+}
+
+.right-panel .author-info .s2 .bio textarea{
+    background-color: rgb(46, 46, 46);
+    width: 100%;
+    border: none;
+    height: 200px;
+    padding-left: 10px;
+    border-radius: 5px;
+    align-items: start;
+    text-align: left;
+    color: aliceblue;
+    padding-top: 10px;
+}
+

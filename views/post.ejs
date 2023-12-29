@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+    <%- include ('partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/course/center-panel.css">
+    <link rel="stylesheet" href="/course/right-panel.css">
+    
+</head>
+<body>
+    <%- include ('partials/header.ejs') %>
+
+    <div class="main">
+        <%- include ('partials/left-panelV1.ejs',{name:''})%>
+
+        <div class="center-panel">
+
+            <div class="content">
+                
+                <div class="lesson">
+
+                    <h2 class="lesson-title">
+                    
+                    </h2>
+
+                    <p class="post-text">
+                        
+
+                    </p>
+
+                </div>
+            
+            </div>
+
+        </div>
+
+     
+        <%- include ('partials/adv.ejs') %>
+
+        <div class="fxElems">
+            <div class="events">
+                <div class="like"><i class="fa fa-thumbs-up " aria-hidden="true"></i></div>
+                <div class="save"><i class="fas fa-bookmark"></i></div>
+            </div>
+        </div>
+    </div>
+    <%- include ('partials/footer-menu.ejs') %>
+    <script>
+        window.userID = '<%-user.ID%>'
+    </script>
+    <script src="/scripts/post.js" type="module">
+
+    </script>
+</body>
+</html>

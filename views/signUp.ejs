@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <%- include ('partials/head.ejs') %>
+        <link rel="stylesheet" href="/welcome/welcome.css">
+
+</head>
+
+<body>
+    <%- include ('partials/header.ejs') %>
+
+        <div class="main">
+            <div class="logIn">
+                <div>
+                    <form action="/user/signup" method="post">
+                        <h2>SIGN UP</h2>
+                        <div  class="inp">
+                            <input type="name" name="fullname" placeholder="name">
+                            <p><%- errs.emtyFullname %></p>
+                        </div>
+                        <div class="inp">
+                            <input type="text" name="username" id="" placeholder="username">
+                            <p>
+                                <% if (errs.emptyUsername !== undefined) {%> <span><%= `${errs.emptyUsername} ` %></span><% } %>
+                                <% if (errs.invalUsername !== undefined) { %><span><%= `${errs.invalUsername}` %></span><% } %>
+                                  
+                            </p>
+                        </div>
+                        <div class="inp">
+                            <input type="text" name="mail" id="" placeholder="mail">
+                            <p>
+                                <% if (errs.emptyMail !== undefined) {%> <span><%= `${errs.emptyMail}` %></span><% } %>
+                                <% if (errs.invalMail !== undefined) { %><span><%= `${errs.invalMail}` %></span><% } %>
+                                </p>
+             
+                        </div>
+                        <div class="inp">
+                            <input type="password" name="password" id="" placeholder="password">
+                            <p><%- errs.emptyPassword %></p>
+                        </div>
+                        <button>sign up</button>
+                    </form>
+
+                    <div class="p2">
+                        Have an account? <span> <a href="./login">Log in</a></span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include ('partials/footer-menu.ejs') %>
+</body>
+
+</html>

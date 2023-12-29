@@ -1,0 +1,193 @@
+@media only screen and (max-width: 1497px) {
+    .right-panel{
+        display: none;
+    }
+    
+    .center-panel{
+        width: 100% !important;
+        margin-left: 80px;
+        margin-right: 20px;
+    }
+
+    .main .center-panel .content{
+        margin-left: 20px;
+        width: 100% ;
+    }  
+    .main .center-panel .content .filter{
+        width: calc(100% - 110px) !important;
+        height: 10px;
+        margin-top: 0 !important;
+        padding-top: 30px !important;
+    } 
+
+
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .events li{
+        width: calc(100% / 3 - 10px) ;
+    }
+   
+}
+  
+@media only screen and (max-width: 900px) {
+
+    /*main*/
+    .right-panel{
+        left: 10px;
+        width: 100% !important;
+    }
+    .right-panel .s2 .bio span{
+        display: none;
+    }
+
+    .header{
+        height: 50px;
+    }
+
+    .header .left-panel .hamburger-icon{
+        display: none;
+    }
+
+    .header .left-panel .search{
+        display: none;
+    }
+
+    .header .left-panel .phone-logo{
+        display: flex;
+    } 
+
+    .header .reight-panel{
+        margin: 10px;
+        margin-right: 30px;
+
+    }
+    .header .reight-panel .make-content{
+        display: none;
+    }
+    
+    .header .reight-panel .notification {
+        margin-right: 20px;
+        font-size: 25px;
+        display: none;
+    }
+
+    .header .reight-panel .user-setings{
+        display: none;
+    }
+    
+    
+    .header .reight-panel .phone-search{
+        display: flex !important;
+    }
+
+    .main{
+        padding-top: 50px;
+    }
+
+    .main .left-panel{
+        display: none;
+    }
+
+    .footer-menu{
+        display: block !important;
+    }
+
+     .footer-menu .user-logo{
+        margin-right: 30px;
+
+    }
+  
+    .main  .center-panel{
+        margin-left: 0 !important ;
+        padding-right: 0px !important;
+        margin-right: 10px !important;
+        width: 100% !important;
+    }
+
+    .main .center-panel .content{
+        margin-left: 0 !important;
+        margin-right: 0 ;
+        width: 100% !important;
+    }
+  
+  
+
+
+    /*home*/
+
+    .main .center-panel .content .filter{
+        width: 100% !important;
+        height: 10px;
+        margin-top: 0 !important;
+        padding-top: 30px !important;
+        
+    } 
+
+    .main .center-panel .content .filter .categories{
+        display: none;
+    }
+  /*remaind*/
+    
+
+    .main .center-panel .content .topics .swiper-button-next:after, .main .center-panel .content .topics  .swiper-button-prev:after{
+        display: none !important;
+    }
+
+
+
+  
+    .main .center-panel .content  .lessons .lesson{
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .main .center-panel .content .searchCategory{
+        width: 100% !important;
+        margin-right: 10px;
+        margin-top: 0;
+    
+        margin-left: 0 !important;
+        
+    }
+
+    .main .center-panel .content .searchCategory div input{
+        width: 100% o !important;
+    }
+
+
+    .wrapMesiges{
+        height: 700px;
+    }
+
+    .main .center-panel .messages{
+        height: 80vh ;
+    }
+    .sender{
+        height: 60px;
+        margin-bottom: 100px;
+    }
+
+}
+
+
+@media only screen and (max-width: 780px) {
+    .events li{
+        width: calc(100%/2 - 10px)!important;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .popup{
+        max-width: 350px !important;
+        top: 50%;
+        left: 50%;
+    }
+    .events li{
+        width: 100%!important;
+    }
+}

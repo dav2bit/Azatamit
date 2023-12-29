@@ -1,0 +1,77 @@
+<html>
+<head>
+    <%- include ('partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/course/center-panel.css">
+    <link rel="stylesheet" href="/course/right-panel.css">
+    <link rel="stylesheet" href="/base/left-panel-V2.css">
+<link rel="stylesheet" href="/base/responsive.css">
+    
+</head>
+<body>
+    <%- include ('partials/header.ejs')  %>
+    
+    <div class="main">
+
+        <div class="left-panel">
+
+            <div class="logo">
+                <span class="openLogo">AZATAMIT</span> 
+            </div>
+            
+            <ul class="navbar">
+               <li> <a href="/"><i class="fa fa-home active" aria-hidden="true"></i></a>  </li>
+               <li> <a href="/chatlist"><i class="fas fa-comment"></i> </a></li>
+               
+            
+            </ul>
+
+            <ul class="lesson-titles">
+                
+                
+            </ul>
+
+        
+        
+        </div>
+
+        
+        <div class="center-panel">
+
+            <div class="content">
+                
+                <div class="lesson">
+                    
+                    <h2 class="lesson-title">
+                      
+                    </h2>
+        
+                    <p class="post-text">
+                     
+                       
+        
+                    </p>
+        
+                </div>
+              
+            </div>
+        
+        </div>
+        
+        
+        
+        <%- include ('partials/adv.ejs') %>
+        
+        <div class="fxElems">
+            <div class="events">
+                <div class="like"><i class="fa fa-thumbs-up " aria-hidden="true"></i></div>
+                <div class="save"><i class="fas fa-bookmark"></i></div>
+            </div>
+        </div>
+    </div>
+    <%- include ('partials/footer-menu.ejs') %>
+    <script>window.userID = '<%-user.ID%>' </script>
+
+    <script src="/scripts/course.js" type="module"></script>
+</body>
+</html>

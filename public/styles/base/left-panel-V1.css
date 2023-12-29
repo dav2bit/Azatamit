@@ -1,0 +1,70 @@
+.main .left-panel{
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--darck-gray);
+    position: fixed;
+    transition: width 1s;
+    z-index: 100;
+}
+
+.main .left-panel .logo{
+    background-color: rgba(164, 255, 61, 0.156);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #fff;
+  }
+
+
+.main .left-panel .navbar{
+    margin: 0;
+    padding: 0;
+}
+
+.main .left-panel .navbar li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    
+}
+
+.main .left-panel .navbar li i::before{
+    font-size: 25px;
+    margin-right: 10px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: var(--darck-gray);
+    box-sizing: border-box;
+}
+
+
+
+.main .left-panel .navbar li:hover i::before {
+    color: rgb(255, 255, 255) !important;
+    text-shadow: none;
+}
+
+
+
+.leftMenuClose .main  .left-panel{
+    width: 70px;
+    transition: width 1s;
+}
+
+
+
+.leftMenuClose .main  .left-panel ul li span {
+    display: none;
+ }
+ 
+
+.leftMenuClose .main  .left-panel ul li span {
+    transition: 0.2s;
+    opacity: 0;
+ }
+

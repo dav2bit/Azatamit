@@ -1,0 +1,65 @@
+
+<html lang="en">
+    <head>
+        <%- include ('partials/head.ejs') %>
+        <link rel="stylesheet" href="/write-post/center-panel.css">
+        <link rel="stylesheet" href="/base/left-panel-V2.css">
+
+
+    </head>  
+    <body>
+        <%- include ('partials/header.ejs') %>
+
+        <div class="main">
+            
+                        
+            <div class="left-panel">
+
+                <div class="logo">
+                    <span class="openLogo">AZATAMIT</span> 
+                </div>
+                
+                <ul class="navbar">
+                   <li> <a href="/"><i class="fa fa-home active" aria-hidden="true"></i></a>  </li>
+                   <li> <a href="/chatlist"><i class="fas fa-comment"></i> </a></li>
+                   
+                </ul>
+    
+                <ul class="lesson-titles">
+                    
+                    
+                </ul>
+                <button class="add_lesson">add lesson</button>
+            
+            
+            </div>
+
+            <div class="center-panel">
+
+                <div class="content">
+                    <div class="title">
+                        <input type="text" placeholder="Title">
+                    </div>
+                    
+                    <div class="post-content">
+                        <div class="editor" id="editorjs"></div>
+                    </div>
+                    <button class="save_lesson savebutton" >save</button>
+                  
+                </div>
+    
+            </div>
+
+        </div>
+
+        <%- include ('partials/footer-menu.ejs') %>
+
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0 "></script>
+        <script src="/scripts/editor.js"></script>
+        <script src="/scripts/write_lesson.js" type="module"> </script>
+    </body>
+</html>
+
